@@ -153,7 +153,7 @@ namespace csharpModule
             return;
         }
 
-       public static void numberSeven(int[] input)
+       public static void numberNine(int[] input)
         {
             // Same as #7
             int result = 0;
