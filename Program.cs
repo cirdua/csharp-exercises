@@ -90,7 +90,7 @@ namespace csharpModule
             return result;
         }
 
-        public static int numberFive(int[] input)
+        public static float numberFive(int[] input)
         {
             int result = 0;
             foreach (int number in input)
@@ -98,7 +98,7 @@ namespace csharpModule
                 result += number;
             }
 
-            int average = result/input.Length;
+            float average = (float)result/(float)input.Length;
             System.Console.WriteLine("#5 Average: {0}", average);
             return average;
         }
@@ -124,7 +124,7 @@ namespace csharpModule
                 result += number;
             }
 
-            int average = result/input.Length;
+            float average = (float)result/(float)input.Length;
             List<int> above_list = new List<int>();
             List<int> below_list = new List<int>();
             List<int> equal_list = new List<int>();
@@ -187,7 +187,7 @@ namespace csharpModule
                 result += number;
             }
 
-            int average = result/input.Length;
+            float average = (float)result/(float)input.Length;
             List<int> above_list = new List<int>();
             List<int> below_list = new List<int>();
             List<int> equal_list = new List<int>();
@@ -246,7 +246,7 @@ namespace csharpModule
             module.numberSix(2);
             module.numberSeven(new int[] {1,2,3});
             module.numberEight();
-            module.numberNine(new int[] {1,2,3});
+            module.numberNine(new int[] {1,2,3,5});
             module.numberTen("Anna", "CE");
         }
     }
