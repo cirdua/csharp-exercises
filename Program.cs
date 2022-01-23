@@ -124,22 +124,46 @@ namespace csharpModule
             }
 
             int average = result/input.Length;
+            List<int> above_list = new List<int>();
+            List<int> below_list = new List<int>();
+            List<int> equal_list = new List<int>();
 
             foreach (int number in input)
             {
                 if (number > average)
                 {
-                    System.Console.WriteLine("#7 {0} is above the average {1}", number, average);
+                    above_list.Add(number);
                 }
                 else if (number < average)
                 {
-                    System.Console.WriteLine("#7 {0} is below the average {1}", number, average);
+                    below_list.Add(number);
                 }
                 else
                 {
-                    System.Console.WriteLine("#7 {0} is equal to the average {1}", number, average);
+                    equal_list.Add(number);
                 }
             }
+
+            System.Console.Write("#9 Numbers above the average: ");
+            foreach (int number in above_list)
+            {
+                System.Console.Write("{0} ", number);
+            }
+            System.Console.WriteLine("");
+
+            System.Console.Write("#9 Numbers below the average: ");
+            foreach (int number in below_list)
+            {
+                System.Console.Write("{0} ", number);
+            }
+            System.Console.WriteLine("");
+
+            System.Console.Write("#9 Numbers equal to the average: ");
+            foreach (int number in equal_list)
+            {
+                System.Console.Write("{0} ", number);
+            }
+            System.Console.WriteLine("");
 
             return;
         }
@@ -163,22 +187,46 @@ namespace csharpModule
             }
 
             int average = result/input.Length;
+            List<int> above_list = new List<int>();
+            List<int> below_list = new List<int>();
+            List<int> equal_list = new List<int>();
 
             foreach (int number in input)
             {
                 if (number > average)
                 {
-                    System.Console.WriteLine("#9 {0} is above the average {1}", number, average);
+                    above_list.Add(number);
                 }
                 else if (number < average)
                 {
-                    System.Console.WriteLine("#9 {0} is below the average {1}", number, average);
+                    below_list.Add(number);
                 }
                 else
                 {
-                    System.Console.WriteLine("#9 {0} is equal to the average {1}", number, average);
+                    equal_list.Add(number);
                 }
             }
+
+            System.Console.Write("#9 Numbers above the average: ");
+            foreach (int number in above_list)
+            {
+                System.Console.Write("{0} ", number);
+            }
+            System.Console.WriteLine("");
+
+            System.Console.Write("#9 Numbers below the average: ");
+            foreach (int number in below_list)
+            {
+                System.Console.Write("{0} ", number);
+            }
+            System.Console.WriteLine("");
+
+            System.Console.Write("#9 Numbers equal to the average: ");
+            foreach (int number in equal_list)
+            {
+                System.Console.Write("{0} ", number);
+            }
+            System.Console.WriteLine("");
 
             return;
         }
@@ -195,9 +243,9 @@ namespace csharpModule
             module.numberFour((float)1.1, (float)2.2);
             module.numberFive(new int[] {1,2,3,5});
             module.numberSix(2);
-            module.numberSeven_2(new int[] {1,2,3});
+            module.numberSeven(new int[] {1,2,3});
             module.numberEight();
-            module.numberNine(10,100);
+            module.numberNine(new int[] {1,2,3});
             module.numberTen("Anna", "CE");
         }
     }
