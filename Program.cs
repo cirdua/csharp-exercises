@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 namespace csharpModule
 {
     class module {
@@ -144,21 +145,21 @@ namespace csharpModule
                 }
             }
 
-            System.Console.Write("#9 Numbers above the average: ");
+            System.Console.Write("#7 Numbers above the average: ");
             foreach (int number in above_list)
             {
                 System.Console.Write("{0} ", number);
             }
             System.Console.WriteLine("");
 
-            System.Console.Write("#9 Numbers below the average: ");
+            System.Console.Write("#7 Numbers below the average: ");
             foreach (int number in below_list)
             {
                 System.Console.Write("{0} ", number);
             }
             System.Console.WriteLine("");
 
-            System.Console.Write("#9 Numbers equal to the average: ");
+            System.Console.Write("#7 Numbers equal to the average: ");
             foreach (int number in equal_list)
             {
                 System.Console.Write("{0} ", number);
