@@ -89,7 +89,7 @@ namespace csharpModule
             return result;
         }
 
-        public static float numberFive(int first, int second, int third)
+        public static int numberFive(int first, int second, int third)
         {
             int average = (first + second + third)/3;
             System.Console.WriteLine("#5 Average: {0}", average);
