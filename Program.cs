@@ -89,9 +89,15 @@ namespace csharpModule
             return result;
         }
 
-        public static int numberFive(int first, int second, int third)
+        public static int numberFive(int[] input)
         {
-            int average = (first + second + third)/3;
+            int result = 0;
+            foreach (int number in input)
+            {
+                result += number;
+            }
+
+            int average = result/input.Length;
             System.Console.WriteLine("#5 Average: {0}", average);
             return average;
         }
@@ -109,20 +115,32 @@ namespace csharpModule
             return;
         }
 
-        public static void numberSeven(int average, int number)
+        public static void numberSeven(int[] input)
         {
-            if (number > average)
+            int result = 0;
+            foreach (int number in input)
             {
-                System.Console.WriteLine("#7 {0} is above the average {1}", number, average);
+                result += number;
             }
-            else if (number < average)
+
+            int average = result/input.Length;
+
+            foreach (int number in input)
             {
-                System.Console.WriteLine("#7 {0} is below the average {1}", number, average);
+                if (number > average)
+                {
+                    System.Console.WriteLine("#7 {0} is above the average {1}", number, average);
+                }
+                else if (number < average)
+                {
+                    System.Console.WriteLine("#7 {0} is below the average {1}", number, average);
+                }
+                else
+                {
+                    System.Console.WriteLine("#7 {0} is equal to the average {1}", number, average);
+                }
             }
-            else
-            {
-                System.Console.WriteLine("#7 {0} is equal to the average {1}", number, average);
-            }
+
             return;
         }
 
@@ -135,24 +153,35 @@ namespace csharpModule
             return;
         }
 
-        public static void numberNine(int average, int number)
+       public static void numberSeven(int[] input)
         {
             // Same as #7
-            if (number > average)
+            int result = 0;
+            foreach (int number in input)
             {
-                System.Console.WriteLine("#9 {0} is above the average {1}", number, average);
+                result += number;
             }
-            else if (number < average)
+
+            int average = result/input.Length;
+
+            foreach (int number in input)
             {
-                System.Console.WriteLine("#9 {0} is below the average {1}", number, average);
+                if (number > average)
+                {
+                    System.Console.WriteLine("#9 {0} is above the average {1}", number, average);
+                }
+                else if (number < average)
+                {
+                    System.Console.WriteLine("#9 {0} is below the average {1}", number, average);
+                }
+                else
+                {
+                    System.Console.WriteLine("#9 {0} is equal to the average {1}", number, average);
+                }
             }
-            else
-            {
-                System.Console.WriteLine("#9 {0} is equal to the average {1}", number, average);
-            }
+
             return;
         }
-
         public static void numberTen(String name,String section)
         {
             System.Console.WriteLine("Name: {0}\nSection: {1}", name, section);
@@ -164,9 +193,9 @@ namespace csharpModule
             module.numberTwo(10);
             module.numberThree(1, 2);
             module.numberFour((float)1.1, (float)2.2);
-            module.numberFive(1,2,3);
+            module.numberFive(new int[] {1,2,3,5});
             module.numberSix(2);
-            module.numberSeven(10,1);
+            module.numberSeven_2(new int[] {1,2,3});
             module.numberEight();
             module.numberNine(10,100);
             module.numberTen("Anna", "CE");
